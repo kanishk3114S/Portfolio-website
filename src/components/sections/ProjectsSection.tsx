@@ -56,7 +56,7 @@ export default function ProjectsSection() {
           >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-800/80 border border-yellow-400/30 text-xs font-mono text-yellow-300 mb-2.5 shadow-sm">
               <FolderGit2 size={13} className="text-yellow-400" />
-              <span>// FEATURED PROJECTS</span>
+              <span>{'// FEATURED PROJECTS'}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
               Featured <span className="text-yellow-400">Projects</span>
@@ -235,7 +235,7 @@ export default function ProjectsSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-yellow-400" />
                   <span className="font-mono text-xs text-yellow-400 uppercase tracking-wider font-semibold">
-                    {selectedProject.title} // SYSTEM ARCHITECTURE
+                    {selectedProject.title} {'// SYSTEM ARCHITECTURE'}
                   </span>
                 </div>
                 <button

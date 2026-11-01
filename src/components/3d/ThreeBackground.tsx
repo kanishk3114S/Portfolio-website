@@ -5,13 +5,19 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
+// Deterministic pseudo-random number generator to ensure render purity
+function pseudoRandom(seed: number) {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
 function AtmosphericField() {
   const pointsRef = useRef<THREE.Points>(null);
 
   const [positions, colors] = useMemo(() => {
     const count = 1800;
-    const positions = new Float32Array(count * 3);
-    const colors = new Float32Array(count * 3);
+    const posArray = new Float32Array(count * 3);
+    const colArray = new Float32Array(count * 3);
 
     // Clean modern developer starfield palette
     const palette = [
@@ -22,16 +28,16 @@ function AtmosphericField() {
     ];
 
     for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 35;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 25;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 20 - 5;
+      posArray[i * 3] = (pseudoRandom(i * 3 + 1) - 0.5) * 35;
+      posArray[i * 3 + 1] = (pseudoRandom(i * 3 + 2) - 0.5) * 25;
+      posArray[i * 3 + 2] = (pseudoRandom(i * 3 + 3) - 0.5) * 20 - 5;
 
-      const c = palette[Math.floor(Math.random() * palette.length)];
-      colors[i * 3] = c[0];
-      colors[i * 3 + 1] = c[1];
-      colors[i * 3 + 2] = c[2];
+      const c = palette[Math.floor(pseudoRandom(i * 3 + 4) * palette.length)];
+      colArray[i * 3] = c[0];
+      colArray[i * 3 + 1] = c[1];
+      colArray[i * 3 + 2] = c[2];
     }
-    return [positions, colors];
+    return [posArray, colArray];
   }, []);
 
   useFrame((state) => {

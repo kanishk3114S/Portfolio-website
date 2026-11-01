@@ -8,6 +8,8 @@ import { ArrowDown, FileText, ArrowUpRight, Trophy, Sparkles, Terminal, Activity
 import { PERSONAL_INFO, EDUCATION } from '@/data/portfolioData';
 import ResumeSwitcherModal from '@/components/ui/ResumeSwitcherModal';
 import TechIcon from '@/components/ui/TechIcon';
+import ProfileSpotlight from '@/components/ui/ProfileSpotlight';
+import Magnetic from '@/components/ui/Magnetic';
 
 const ThreeBackground = dynamic(() => import('@/components/3d/ThreeBackground'), {
   ssr: false,
@@ -33,8 +35,10 @@ function useTypewriter(strings: string[], speed = 40, pause = 2200) {
     if (!deleting && display === current) {
       timeout = setTimeout(() => setDeleting(true), pause);
     } else if (deleting && display === '') {
-      setDeleting(false);
-      setIdx((i) => i + 1);
+      timeout = setTimeout(() => {
+        setDeleting(false);
+        setIdx((i) => i + 1);
+      }, speed);
     } else {
       timeout = setTimeout(
         () =>
@@ -175,30 +179,35 @@ export default function HeroSection() {
               Experienced in Next.js, React, Node.js, and RAG pipelines, backed by 1,000+ competitive algorithm solves.
             </motion.p>
 
-            {/* CTAs */}
+            {/* Magnetic CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
               className="flex flex-wrap items-center gap-3 pt-2"
             >
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-yellow-400 hover:bg-yellow-300 text-black transition-all shadow-lg shadow-yellow-500/20 active:scale-98"
-              >
-                <span>VIEW PROJECTS</span>
-                <ArrowDown size={13} />
-              </a>
-              <button
-                onClick={() => setResumeOpen(true)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/15 hover:border-yellow-400/50 transition-all cursor-pointer"
-              >
-                <FileText size={13} className="text-yellow-400" />
-                <span>VIEW RESUMES</span>
-              </button>
+              <Magnetic strength={0.2} maxDistance={8}>
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-yellow-400 hover:bg-yellow-300 text-black transition-all shadow-lg shadow-yellow-500/20 active:scale-98"
+                >
+                  <span>VIEW PROJECTS</span>
+                  <ArrowDown size={13} />
+                </a>
+              </Magnetic>
+
+              <Magnetic strength={0.2} maxDistance={8}>
+                <button
+                  onClick={() => setResumeOpen(true)}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/15 hover:border-yellow-400/50 transition-all cursor-pointer"
+                >
+                  <FileText size={13} className="text-yellow-400" />
+                  <span>VIEW RESUMES</span>
+                </button>
+              </Magnetic>
             </motion.div>
 
-            {/* Links */}
+            {/* Magnetic Social Links */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -211,21 +220,22 @@ export default function HeroSection() {
                 { label: 'LeetCode', url: PERSONAL_INFO.leetcodeUrl },
                 { label: 'Codeforces', url: PERSONAL_INFO.codeforcesUrl },
               ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-mono text-zinc-400 hover:text-yellow-300 transition-colors"
-                >
-                  <span>{s.label}</span>
-                  <ArrowUpRight size={11} className="text-zinc-500" />
-                </a>
+                <Magnetic key={s.label} strength={0.3} maxDistance={8}>
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-mono text-zinc-400 hover:text-yellow-300 transition-colors"
+                  >
+                    <span>{s.label}</span>
+                    <ArrowUpRight size={11} className="text-zinc-500" />
+                  </a>
+                </Magnetic>
               ))}
             </motion.div>
           </div>
 
-          {/* Right: Interactive 3D Card Container with Animated Floating Skill Pods */}
+          {/* Right: Interactive 3D Card Container with Profile Spotlight & Animated Floating Skill Pods */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -273,36 +283,11 @@ export default function HeroSection() {
               <span className="font-semibold text-white">Knight 1883</span>
             </motion.div>
 
-            {/* Main Portrait Frame with Dark Pulse Aura & Yellow Accent */}
-            <div className="relative group">
-              {/* Breathing Dark Pulse Glow behind Portrait */}
-              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-red-900/30 via-yellow-500/20 to-red-950/40 blur-md opacity-70 animate-dark-pulse pointer-events-none" />
-
-              <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl bg-zinc-900/90 border border-yellow-400/30 p-2.5 shadow-2xl overflow-hidden group-hover:border-yellow-400/60 transition-colors">
-                <div className="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950">
-                  <Image
-                    src={PERSONAL_INFO.profileImage}
-                    alt={PERSONAL_INFO.name}
-                    fill
-                    sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, 320px"
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-104"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent pointer-events-none" />
-
-                  {/* Bottom Status Card */}
-                  <div className="absolute bottom-3 inset-x-3 p-2.5 rounded-xl bg-zinc-950/90 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span className="text-zinc-200 font-medium font-mono text-[11px]">ACTIVE / RECRUITING</span>
-                    </div>
-                    <span className="font-mono text-[10px] text-yellow-400 font-bold">
-                      AVAILABLE
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Profile Spotlight Illumination Component */}
+            <ProfileSpotlight
+              src={PERSONAL_INFO.profileImage}
+              alt={PERSONAL_INFO.name}
+            />
           </motion.div>
         </div>
       </div>

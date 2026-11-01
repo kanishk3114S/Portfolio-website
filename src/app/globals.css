@@ -54,7 +54,20 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-light-grey);
   overflow-x: hidden;
-  cursor: none;
+}
+
+/* Custom Cursor Scoping:
+   Only hide native cursor when fine pointer is detected,
+   reduced motion is not requested, and CustomCursor has attached .has-custom-cursor
+*/
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor [data-hover] {
+    cursor: none !important;
+  }
 }
 
 @media (pointer: coarse) {
@@ -103,7 +116,25 @@ body {
   background-size: 26px 26px;
 }
 
-/* Itachi Dark Pulse & Atmospheric Breathing Animations */
+/* Cursor Ripple Animation */
+@keyframes cursor-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.95;
+    border-width: 2px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3.2);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+.animate-cursor-ripple {
+  animation: cursor-ripple 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dark Pulse & Atmospheric Breathing Animations */
 @keyframes dark-pulse {
   0%, 100% {
     opacity: 0.2;

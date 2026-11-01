@@ -16,7 +16,7 @@ import {
 import { SKILLS_ARSENAL, type SkillItem } from '@/data/portfolioData';
 import TechIcon from '@/components/ui/TechIcon';
 
-const CATEGORIES: { label: string; value: SkillItem['category'] | 'all'; icon: any }[] = [
+const CATEGORIES: { label: string; value: SkillItem['category'] | 'all'; icon: React.ComponentType<{ className?: string; size?: number | string }> }[] = [
   { label: 'All Skills', value: 'all', icon: Sparkles },
   { label: 'Languages', value: 'languages', icon: Terminal },
   { label: 'Frontend', value: 'frontend', icon: Layers },
@@ -161,7 +161,7 @@ export default function SkillsSection() {
           >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-800/80 border border-yellow-400/30 text-xs font-mono text-yellow-300 mb-2.5 shadow-sm">
               <Cpu size={13} className="text-yellow-400" />
-              <span>// SKILLS & TECHNOLOGIES</span>
+              <span>{'// SKILLS & TECHNOLOGIES'}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
               Skills <span className="text-yellow-400">&</span> Technologies

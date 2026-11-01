@@ -104,7 +104,7 @@ export default function AlgorithmicVault() {
           >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-800/80 border border-yellow-400/30 text-xs font-mono text-yellow-300 mb-2.5 shadow-sm">
               <Terminal size={13} className="text-yellow-400" />
-              <span>// PROBLEM SOLVING & LEETCODE</span>
+              <span>{'// PROBLEM SOLVING & LEETCODE'}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
               1,000+ Problems <span className="text-yellow-400">Solved</span>

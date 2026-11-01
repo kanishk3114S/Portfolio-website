@@ -8,6 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Mail, MapPin, Send, Check, AlertCircle, GitFork, Link2, MessageSquare } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
+import Magnetic from '@/components/ui/Magnetic';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(60),
@@ -74,7 +75,7 @@ export default function ContactSection() {
           >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-800/80 border border-yellow-400/30 text-xs font-mono text-yellow-300 mb-2.5 shadow-sm">
               <MessageSquare size={13} className="text-yellow-400" />
-              <span>// GET IN TOUCH</span>
+              <span>{'// GET IN TOUCH'}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
               Let&apos;s <span className="text-yellow-400">Connect</span>
@@ -155,7 +156,7 @@ export default function ContactSection() {
               noValidate
             >
               <h3 className="font-bold text-white text-base mb-1">
-                Direct Dispatch Transmission
+                Direct Message
               </h3>
 
               <input {...register('_honeypot')} className="hidden" tabIndex={-1} autoComplete="off" />
@@ -218,29 +219,31 @@ export default function ContactSection() {
                 {errors.message && <span className="text-[10px] text-rose-400 flex items-center gap-1"><AlertCircle size={9} />{errors.message.message}</span>}
               </div>
 
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="mt-1 w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-yellow-400 hover:bg-yellow-300 text-black disabled:opacity-50 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-yellow-500/20 cursor-pointer active:scale-99"
-              >
-                {status === 'loading' ? (
-                  <span>Transmitting...</span>
-                ) : status === 'success' ? (
-                  <>
-                    <Check size={13} />
-                    <span>Transmission Delivered</span>
-                  </>
-                ) : (
-                  <>
-                    <Send size={13} />
-                    <span>DISPATCH MESSAGE</span>
-                  </>
-                )}
-              </button>
+              <Magnetic strength={0.15} maxDistance={6} className="w-full">
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-yellow-400 hover:bg-yellow-300 text-black disabled:opacity-50 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-yellow-500/20 cursor-pointer active:scale-99"
+                >
+                  {status === 'loading' ? (
+                    <span>Sending Message...</span>
+                  ) : status === 'success' ? (
+                    <>
+                      <Check size={13} />
+                      <span>Message Sent</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={13} />
+                      <span>SEND MESSAGE</span>
+                    </>
+                  )}
+                </button>
+              </Magnetic>
 
               {status === 'error' && (
                 <p className="text-[11px] text-rose-400 text-center font-mono">
-                  Failed to transmit. Please contact chesssynid@gmail.com directly.
+                  Failed to send message. Please contact chesssynid@gmail.com directly.
                 </p>
               )}
             </form>

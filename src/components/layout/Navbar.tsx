@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FileText, Menu, X, ArrowUpRight } from 'lucide-react';
 import ResumeSwitcherModal from '@/components/ui/ResumeSwitcherModal';
+import Magnetic from '@/components/ui/Magnetic';
 
 const NAV_LINKS = [
   { label: 'ABOUT', href: '#journey' },
@@ -46,13 +47,15 @@ export default function Navbar() {
 
           {/* Action Hub */}
           <div className="flex items-center gap-2.5">
-            <button
-              onClick={() => setResumeOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-yellow-400 hover:bg-yellow-300 text-black transition-all shadow-md shadow-yellow-500/10 cursor-pointer active:scale-98"
-            >
-              <FileText size={12} />
-              <span>RESUME</span>
-            </button>
+            <Magnetic strength={0.2} maxDistance={6}>
+              <button
+                onClick={() => setResumeOpen(true)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-yellow-400 hover:bg-yellow-300 text-black transition-all shadow-md shadow-yellow-500/10 cursor-pointer active:scale-98"
+              >
+                <FileText size={12} />
+                <span>RESUME</span>
+              </button>
+            </Magnetic>
 
             {/* Mobile Hamburger Toggle */}
             <button
