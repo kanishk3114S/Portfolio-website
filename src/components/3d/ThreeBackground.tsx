@@ -16,8 +16,8 @@ function AtmosphericField() {
     // Clean modern developer starfield palette
     const palette = [
       [1.0, 1.0, 1.0],     // crisp white
-      [0.51, 0.55, 0.98],  // soft indigo
-      [0.22, 0.74, 0.97],  // soft sky blue
+      [0.98, 0.8, 0.08],   // subtle amber gold
+      [0.85, 0.85, 0.9],   // light silver
       [0.6, 0.65, 0.75],   // slate silver
     ];
 

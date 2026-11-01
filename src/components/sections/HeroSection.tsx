@@ -56,19 +56,37 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className="relative py-20 md:py-24 overflow-hidden select-none">
-      {/* Seamless Atmospheric Theme Background */}
+      {/* Itachi Uchiha Moon Atmospheric Background with Dark Pulse */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <Image
-          src="/images/themes/samurai-cyberpunk-3840x2160-13692.jpeg"
-          alt="Atmospheric background"
+          src="/images/themes/itachi-uchiha-moon-5120x2880-25777.jpg"
+          alt="Itachi Uchiha Moon Background"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-top opacity-20 mix-blend-luminosity brightness-75 contrast-125 scale-105"
+          className="object-cover object-center opacity-30 mix-blend-luminosity brightness-80 contrast-125 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e1013] via-[#0e1013]/60 to-[#0e1013]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0e1013] via-transparent to-[#0e1013]/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#0e1013_85%)]" />
+
+        {/* Ambient Blood-Moon Dark Pulse */}
+        <div
+          className="absolute top-1/4 right-1/4 w-[520px] h-[520px] rounded-full blur-[110px] animate-dark-pulse pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, rgba(185, 28, 28, 0.35) 0%, rgba(127, 29, 29, 0.16) 50%, transparent 75%)',
+          }}
+        />
+
+        {/* Secondary Sharingan Ambient Pulse */}
+        <div
+          className="absolute -top-16 left-1/3 w-[620px] h-[620px] rounded-full blur-[140px] animate-sharingan-ambient pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, rgba(153, 27, 27, 0.22) 0%, rgba(20, 2, 5, 0.12) 60%, transparent 80%)',
+          }}
+        />
+
+        {/* Seamless Vignette and Section Blending Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e1013] via-transparent to-[#0e1013]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0e1013] via-transparent to-[#0e1013]/80" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_25%,#0e1013_85%)]" />
       </div>
 
       {/* Subtle Star Particles */}
@@ -255,28 +273,33 @@ export default function HeroSection() {
               <span className="font-semibold text-white">Knight 1883</span>
             </motion.div>
 
-            {/* Main Portrait Frame with Yellow Accent Glow */}
-            <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl bg-zinc-900/90 border border-yellow-400/30 p-2.5 shadow-2xl overflow-hidden group hover:border-yellow-400/60 transition-colors">
-              <div className="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950">
-                <Image
-                  src={PERSONAL_INFO.profileImage}
-                  alt={PERSONAL_INFO.name}
-                  fill
-                  sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, 320px"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-104"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent pointer-events-none" />
+            {/* Main Portrait Frame with Dark Pulse Aura & Yellow Accent */}
+            <div className="relative group">
+              {/* Breathing Dark Pulse Glow behind Portrait */}
+              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-red-900/30 via-yellow-500/20 to-red-950/40 blur-md opacity-70 animate-dark-pulse pointer-events-none" />
 
-                {/* Bottom Status Card */}
-                <div className="absolute bottom-3 inset-x-3 p-2.5 rounded-xl bg-zinc-950/90 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-zinc-200 font-medium font-mono text-[11px]">ACTIVE / RECRUITING</span>
+              <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl bg-zinc-900/90 border border-yellow-400/30 p-2.5 shadow-2xl overflow-hidden group-hover:border-yellow-400/60 transition-colors">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950">
+                  <Image
+                    src={PERSONAL_INFO.profileImage}
+                    alt={PERSONAL_INFO.name}
+                    fill
+                    sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, 320px"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-104"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent pointer-events-none" />
+
+                  {/* Bottom Status Card */}
+                  <div className="absolute bottom-3 inset-x-3 p-2.5 rounded-xl bg-zinc-950/90 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="text-zinc-200 font-medium font-mono text-[11px]">ACTIVE / RECRUITING</span>
+                    </div>
+                    <span className="font-mono text-[10px] text-yellow-400 font-bold">
+                      AVAILABLE
+                    </span>
                   </div>
-                  <span className="font-mono text-[10px] text-yellow-400 font-bold">
-                    AVAILABLE
-                  </span>
                 </div>
               </div>
             </div>

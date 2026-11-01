@@ -103,6 +103,39 @@ body {
   background-size: 26px 26px;
 }
 
+/* Itachi Dark Pulse & Atmospheric Breathing Animations */
+@keyframes dark-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+    filter: drop-shadow(0 0 35px rgba(220, 38, 38, 0.25));
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 75px rgba(239, 68, 68, 0.45));
+  }
+}
+
+.animate-dark-pulse {
+  animation: dark-pulse 7s ease-in-out infinite;
+}
+
+@keyframes sharingan-ambient {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 0.38;
+    transform: scale(1.05);
+  }
+}
+
+.animate-sharingan-ambient {
+  animation: sharingan-ambient 9s ease-in-out infinite;
+}
+
 /* Container Animations */
 @keyframes container-float {
   0%, 100% { transform: translateY(0px); }

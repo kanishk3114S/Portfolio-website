@@ -36,7 +36,7 @@ export default function ProjectsSection() {
       {/* Seamless Atmospheric Theme Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <Image
-          src="/images/themes/female-v-cyberpunk-3840x2160-13542.jpg"
+          src="/images/themes/dramatic-scenery-3840x2160-20802.jpg"
           alt="Atmospheric theme background"
           fill
           sizes="100vw"
