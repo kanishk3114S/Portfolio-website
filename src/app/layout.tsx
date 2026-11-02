@@ -35,6 +35,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Kanishk Sharma', url: 'https://github.com/kanishk3114S' }],
   creator: 'Kanishk Sharma',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
