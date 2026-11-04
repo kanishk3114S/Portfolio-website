@@ -1,149 +1,218 @@
-# Kanishk Sharma — Developer Portfolio (2026)
+# Kanishk Sharma — Portfolio
 
 <div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js%2016-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel_Ready-000000?style=for-the-badge&logo=vercel&logoColor=white)
+<img src="./public/images/profile/kanishk-profile.jpg" alt="Kanishk Sharma" width="132" height="132" style="border-radius: 50%;" />
 
-**High-performance, visual-first developer portfolio engineered for Kanishk Sharma.**  
-*4th-year Computer Science & Engineering student at VIT Bhopal (CGPA 8.34) · Full-Stack & Applied AI Engineer · LeetCode Knight (1883).*
+## Full-stack engineering × applied GenAI
 
-[Live Demo](https://kanishk-sharma.vercel.app) • [Report Bug](https://github.com/kanishk3114S/Portfolio-website/issues) • [Request Feature](https://github.com/kanishk3114S/Portfolio-website/issues)
+An editorial-style portfolio for **Kanishk Sharma** — a 4th-year Computer Science student at VIT Bhopal building thoughtful web products, AI tools, and developer experiences.
+
+[![Live portfolio](https://img.shields.io/badge/Live%20portfolio-kanishk--sharma.vercel.app-facc15?style=for-the-badge&labelColor=0e1013)](https://kanishk-sharma.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-kanishk3114S-18181b?style=for-the-badge&logo=github)](https://github.com/kanishk3114S)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-connect-0a66c2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/kanishk-sharma-b0912735a)
+
+<br />
+
+![Next.js](https://img.shields.io/badge/Next.js%2016-0e1013?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React%2019-0e1013?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-0e1013?style=flat-square&logo=typescript&logoColor=3178C6)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS%204-0e1013?style=flat-square&logo=tailwindcss&logoColor=06B6D4)
+![React Three Fiber](https://img.shields.io/badge/R3F%20%2B%20Three.js-0e1013?style=flat-square&logo=threedotjs&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0e1013?style=flat-square&logo=framer&logoColor=white)
 
 </div>
 
----
+<br />
 
-## Highlights & Features
+![Portfolio preview](./public/images/projects/leetbuddy-hero.png)
 
-- **Icon-First Visual Arsenal:** 20+ technologies displayed in an ultra-clean, high-density Bento grid with authentic, multi-colored vector brand SVGs and zero walls of text.
-- **Interactive Project Bento:** Deployed creations with macOS window controls, live preview links, source code triggers, and deep **System Architecture & Data Flow** blueprint modals.
-- **1,000+ Algorithmic Solves:** Live odometer counter, interactive SVG difficulty gauges (Easy 32%, Medium 54%, Hard 14%), dynamic yellow Bézier curve charting LeetCode contest rating progression (1883 Knight • Top 3.8%), and C++ STL topic matrices.
-- **Academic & Experience Journey:** Clean vertical milestone timeline with scroll-linked electric yellow laser beam tracking collegiate hackathons, Oracle OCI certifications, and production launches.
-- **Dual Resume Switcher:** ATS-optimized PDF previews and direct downloads for both **Full-Stack + Applied AI** and **Generative AI & RAG** role lenses.
-- **Grey – Yellow – Light Grey Aesthetic:** Industrial charcoal canvas (`#0e1013`) accented with high-voltage electric yellow (`#facc15`), smooth 3D magnetic tilts, and seamless atmospheric 4K theme backdrops blended via luminosity filters and edge vignettes.
-- **Enterprise Contact API:** Serverless Next.js route with Zod schema validation, in-memory IP rate limiting, honeypot bot trap, and responsive feedback.
+## The idea
 
----
+This portfolio is designed to feel like a calm, tactile workspace rather than a template dashboard. The visual system is built from a charcoal canvas, restrained yellow accents, typography-led layouts, subtle atmospheric imagery, and motion that supports navigation instead of competing with the work.
 
-## Tech Stack
+The page brings together:
 
-| Domain | Technologies |
-|---|---|
-| **Core Framework** | Next.js 16 (App Router, Turbopack, SSR, Serverless API Routes) |
-| **Frontend & UI** | React 19, TypeScript, Tailwind CSS v4, Framer Motion |
-| **3D & Graphics** | Three.js (Procedural Celestial Particles, Dynamic Canvas) |
-| **Icons & Media** | Zero-dependency inline multi-color vector SVGs, Next.js Image Optimization |
-| **Validation & State** | Zod, React Hook Form, Custom Micro-Cursor Hook, Scroll Springs |
-| **Deployment** | Vercel (Edge Network, Zero-Config Next.js pipeline) |
+- **Projects** — six full-stack and AI projects with filters, live previews, stack details, and architecture/data-flow views.
+- **Engineering journey** — education, hackathons, certifications, and milestones in a scroll-linked timeline.
+- **Algorithmic work** — 1,000+ solved problems, rating history, topic proficiency, and competitive programming metrics.
+- **Skills** — a visual, categorized technology library backed by the central portfolio data store.
+- **Contact** — a validated form endpoint with request limits and clear success/error states.
 
----
+## At a glance
 
-## Project Structure
+| | |
+| --- | --- |
+| **Name** | Kanishk Sharma |
+| **Focus** | Full-stack web applications · applied GenAI · RAG systems |
+| **Education** | B.Tech CSE, VIT Bhopal · 2023–2027 |
+| **Academic score** | CGPA 8.34 |
+| **Competitive programming** | 1,000+ problems · LeetCode Knight · peak rating 1883 |
+| **Location** | India |
 
+## Featured work
+
+| Project | What it explores | Category |
+| --- | --- | --- |
+| [LeetBuddy](https://leet-buddy-six.vercel.app/) | Competitive programming analytics and an AI coding mentor | AI / RAG |
+| [CricScript AI](https://cricscript-ai.onrender.com/) | Grounded match research and documentary script generation | AI / agents |
+| [Engram](https://engram-teal.vercel.app/) | Persona-based journaling with long-term vector memory | AI / memory |
+| [TruthLens](https://truuuthlens.vercel.app/) | Media claim verification with confidence and bias signals | Full-stack |
+| [ProjectCamp](https://project-management-application-six.vercel.app/) | Team project management with RBAC and sprint velocity | Full-stack |
+| **The Mega World** | Kalos Pokédex, 3D map exploration, and team-building tools | Full-stack |
+
+Each project is represented in [`src/data/portfolioData.ts`](./src/data/portfolioData.ts), keeping copy, technologies, screenshots, and architecture details in one typed source of truth.
+
+## Experience by design
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Ambient 3D</h3>
+      A lightweight React Three Fiber canvas renders a deterministic 1,800-point atmospheric field behind the hero. It adds depth without turning the portfolio into a scene that distracts from the content.
+    </td>
+    <td width="50%" valign="top">
+      <h3>Quiet interaction</h3>
+      Framer Motion handles entrance transitions, project filtering, floating skill chips, modal states, and spring-like micro-interactions. Reduced-motion preferences are respected globally.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Useful detail</h3>
+      Project cards open into architecture views with system patterns, nodes, and data flow — enough technical context to understand the work without burying the visitor in a case-study wall of text.
+    </td>
+    <td width="50%" valign="top">
+      <h3>Built for scanning</h3>
+      Clear section anchors, a scroll telemetry HUD, responsive layouts, high-contrast controls, semantic metadata, and a dark/light theme make the long-form page easy to navigate.
+    </td>
+  </tr>
+</table>
+
+## Tech stack
+
+| Layer | Tools |
+| --- | --- |
+| **Framework** | Next.js 16 App Router, React 19, TypeScript |
+| **Styling** | Tailwind CSS 4, custom CSS variables, responsive utilities |
+| **Motion** | Framer Motion, CSS keyframes, magnetic pointer interactions |
+| **3D** | Three.js, React Three Fiber, Drei |
+| **UI** | Lucide React, Next Image, typed inline technology icons |
+| **Forms & validation** | React Hook Form, Zod |
+| **Theme** | next-themes with dark and light modes |
+| **Deployment** | Vercel-ready Next.js build |
+
+## Application flow
+
+```text
+Next.js App Router
+        │
+        ├── Root layout
+        │     ├── Metadata + Open Graph
+        │     ├── Person JSON-LD
+        │     ├── Theme provider
+        │     └── Custom cursor
+        │
+        ├── Home page
+        │     ├── Hero + R3F atmospheric field
+        │     ├── Journey timeline
+        │     ├── Filterable project grid
+        │     ├── Algorithmic vault
+        │     ├── Skills arsenal
+        │     ├── Achievements
+        │     └── Contact form
+        │
+        └── POST /api/contact
+              ├── JSON parsing
+              ├── Zod validation
+              ├── Per-IP in-memory rate limiting
+              └── Server-side receipt response
 ```
-frontend/
+
+The contact route currently validates and logs submissions server-side. It does not send email through a third-party provider yet, so no environment variables are required to run the project locally.
+
+## Project structure
+
+```text
+.
 ├── public/
 │   ├── images/
-│   │   ├── profile/            # High-resolution headshot
-│   │   ├── projects/           # Screenshots for featured works
-│   │   └── themes/             # Curated 4K atmospheric backdrops
-│   └── resumes/
-│       ├── KanishkSharma_FullStack.pdf
-│       └── KanishkSharma_GenAI.pdf
+│   │   ├── profile/       # Profile image
+│   │   ├── projects/      # Project preview images
+│   │   └── themes/        # Atmospheric background artwork
+│   └── resumes/           # Full-stack and GenAI PDF resumes
 ├── src/
 │   ├── app/
-│   │   ├── api/contact/        # Zod-validated, rate-limited contact route
-│   │   ├── globals.css         # Industrial grid, keyframes, theme variables
-│   │   ├── layout.tsx          # Metadata, JSON-LD Schema.org, fonts
-│   │   └── page.tsx            # Main page assembly
+│   │   ├── api/contact/   # Validated contact endpoint
+│   │   ├── globals.css    # Theme tokens, grid, motion, accessibility
+│   │   ├── layout.tsx     # Fonts, metadata, JSON-LD, providers
+│   │   └── page.tsx       # Portfolio section composition
 │   ├── components/
-│   │   ├── 3d/                 # Three.js celestial background canvas
-│   │   ├── layout/             # Navbar (Tactical Dock) and Footer
-│   │   ├── sections/
-│   │   │   ├── HeroSection.tsx
-│   │   │   ├── JourneySection.tsx
-│   │   │   ├── ProjectsSection.tsx
-│   │   │   ├── AlgorithmicVault.tsx
-│   │   │   ├── SkillsSection.tsx
-│   │   │   ├── AchievementsSection.tsx
-│   │   │   └── ContactSection.tsx
-│   │   └── ui/
-│   │       ├── CustomCursor.tsx        # High-voltage yellow micro-dot & ring
-│   │       ├── ResumeSwitcherModal.tsx # Dual resume selector
-│   │       └── TechIcon.tsx            # Zero-dependency official brand SVGs
-│   ├── config/
-│   │   └── themeAssets.ts      # Strongly-typed asset registry
-│   └── data/
-│       └── portfolioData.ts    # Central verified credentials & project specs
-└── package.json
+│   │   ├── 3d/            # React Three Fiber background
+│   │   ├── layout/        # Navbar and footer
+│   │   ├── sections/      # Main portfolio sections
+│   │   └── ui/            # Reusable interaction and display primitives
+│   ├── config/            # Theme asset registry
+│   ├── context/           # Atmosphere state
+│   └── data/              # Typed portfolio content
+├── next.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
----
+## Run locally
 
-## Getting Started Locally
+### Requirements
 
-### Prerequisites
-- Node.js 18.18+ or 20.x or 22.x
-- npm, pnpm, or yarn
+- Node.js 18.18+ (Node 20+ recommended)
+- npm
 
-### Installation
-1. Clone the repository:
+### Install and start
+
 ```bash
 git clone https://github.com/kanishk3114S/Portfolio-website.git
 cd Portfolio-website
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-3. Run the development server:
-```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-### Production Build
+### Available scripts
+
 ```bash
-npm run build
-npm run start
+npm run dev       # Start the development server
+npm run lint      # Run ESLint
+npm run build     # Create a production build
+npm run start     # Serve the production build
 ```
 
----
+## Deploy
 
-## Deploy to Vercel
+The project is ready for a standard Vercel deployment:
 
-This repository is built and tested for direct, zero-config deployment on **Vercel**:
+1. Import the GitHub repository into [Vercel](https://vercel.com/new).
+2. Keep the framework preset as **Next.js**.
+3. Use the default install and build settings.
+4. Deploy.
 
-1. Fork or push this repository to your GitHub account.
-2. Go to [Vercel](https://vercel.com/new).
-3. Import the `Portfolio-website` repository.
-4. Vercel automatically detects Next.js:
-   - **Framework Preset:** Next.js
-   - **Build Command:** `next build`
-   - **Output Directory:** `.next`
-5. Click **Deploy**. Your site will be live on Vercel's Edge Network in under 60 seconds!
+No environment variables are needed for the current version.
 
----
+## Connect
 
-## Author & Contact
-
-**Kanishk Sharma**
-- **University:** B.Tech CSE @ Vellore Institute of Technology (VIT Bhopal), Class of 2027
-- **Email:** [chesssynid@gmail.com](mailto:chesssynid@gmail.com)
-- **LinkedIn:** [linkedin.com/in/kanishk-sharma-b0912735a](https://www.linkedin.com/in/kanishk-sharma-b0912735a)
-- **GitHub:** [github.com/kanishk3114S](https://github.com/kanishk3114S)
-- **LeetCode:** [leetcode.com/KanishkSharma3114](https://leetcode.com/KanishkSharma3114) (Knight • 1883)
-
----
+| | |
+| --- | --- |
+| **Email** | [chesssynid@gmail.com](mailto:chesssynid@gmail.com) |
+| **LinkedIn** | [kanishk-sharma-b0912735a](https://www.linkedin.com/in/kanishk-sharma-b0912735a) |
+| **GitHub** | [kanishk3114S](https://github.com/kanishk3114S) |
+| **LeetCode** | [KanishkSharma3114](https://leetcode.com/KanishkSharma3114) |
+| **Codeforces** | [kanishk3114S](https://codeforces.com/profile/kanishk3114S) |
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open source under the [MIT License](./LICENSE).
+
+<div align="center">
+
+<sub>Designed and built by Kanishk Sharma.</sub>
+
+</div>
