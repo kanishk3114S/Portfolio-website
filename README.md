@@ -2,13 +2,11 @@
 
 <div align="center">
 
-<img src="./public/images/profile/kanishk-profile.jpg" alt="Kanishk Sharma" width="132" height="132" style="border-radius: 50%;" />
-
 ## Full-stack engineering × applied GenAI
 
 An editorial-style portfolio for **Kanishk Sharma** — a 4th-year Computer Science student at VIT Bhopal building thoughtful web products, AI tools, and developer experiences.
 
-[![Live portfolio](https://img.shields.io/badge/Live%20portfolio-kanishk--sharma.vercel.app-facc15?style=for-the-badge&labelColor=0e1013)](https://kanishk-sharma.vercel.app)
+[![Live portfolio](https://img.shields.io/badge/Live%20portfolio-myportfolio--mu--cyan--34.vercel.app-facc15?style=for-the-badge&labelColor=0e1013)](https://myportfolio-mu-cyan-34.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-kanishk3114S-18181b?style=for-the-badge&logo=github)](https://github.com/kanishk3114S)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-connect-0a66c2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/kanishk-sharma-b0912735a)
 
