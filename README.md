@@ -23,8 +23,6 @@ An editorial-style portfolio for **Kanishk Sharma** — a 4th-year Computer Scie
 
 <br />
 
-![Portfolio preview](./public/images/projects/leetbuddy-hero.png)
-
 ## The idea
 
 This portfolio is designed to feel like a calm, tactile workspace rather than a template dashboard. The visual system is built from a charcoal canvas, restrained yellow accents, typography-led layouts, subtle atmospheric imagery, and motion that supports navigation instead of competing with the work.
@@ -49,6 +47,53 @@ The page brings together:
 | **Location** | India |
 
 ## Featured work
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://leet-buddy-six.vercel.app/">
+        <img src="./public/images/projects/leetbuddy-hero.png" alt="LeetBuddy project preview" />
+      </a>
+      <strong>LeetBuddy</strong><br />
+      <sub>Competitive programming analytics and AI mentor</sub>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://cricscript-ai.onrender.com/">
+        <img src="./public/images/projects/cricscript-hero.png" alt="CricScript AI project preview" />
+      </a>
+      <strong>CricScript AI</strong><br />
+      <sub>Match research and documentary scripting agents</sub>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://engram-teal.vercel.app/">
+        <img src="./public/images/projects/engram-hero.png" alt="Engram project preview" />
+      </a>
+      <strong>Engram</strong><br />
+      <sub>Persona-based journaling with vector memory</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://truuuthlens.vercel.app/">
+        <img src="./public/images/projects/truthlens-hero.png" alt="TruthLens project preview" />
+      </a>
+      <strong>TruthLens</strong><br />
+      <sub>Media claim verification and evidence workspace</sub>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://project-management-application-six.vercel.app/">
+        <img src="./public/images/projects/projectcamp-hero.png" alt="ProjectCamp project preview" />
+      </a>
+      <strong>ProjectCamp</strong><br />
+      <sub>Project management, RBAC, and sprint velocity</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./public/images/projects/megaworld-hero.png" alt="The Mega World project preview" />
+      <strong>The Mega World</strong><br />
+      <sub>Kalos Pokédex, 3D map, and team builder</sub>
+    </td>
+  </tr>
+</table>
 
 | Project | What it explores | Category |
 | --- | --- | --- |
